@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slider in website</title>
+    </head>
+    <body>
+        <section>
+            <img class="mySlides" src="D:\marmik\Image.jpg" style="height:500px;">
+            <img class="mySlides" src="D:\marmik\Image 1.jpg" style="height:500px;">
+            <img class="mySlides" src="D:\marmik\Image 2.jpg" style="height:500px;">
+        </section>
+        <script>
+            var myIndex = 0;
+            slider();
+            function slider() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(slider, 3000);
+            }
+        </script>
+    </body>
+</html>
